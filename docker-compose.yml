@@ -1,0 +1,9 @@
+app:
+  build: .
+  command: "npm run dev"
+  volumes:
+#    - - ./src:/usr/src/app/src
+#      - ./dist:/usr/src/app/dist
+    - .:/usr/src/app
+  ports:
+    - "49160:8080"
