@@ -6,6 +6,17 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+export const eventBusComm = new Vue({
+  methods: {
+    showServer(server) {
+      this.$emit('server:show', server);
+    },
+    updateServer(server) {
+      this.$emit('server:update', server);
+    }
+  }
+});
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
